@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <div className="wrapper">
             <div className="main-panel ps ps--active-y" id="main-panel">
-                <MainMenu />
+                <MainMenu nameActive="inicio"/>
                 <NavHeader title="Início" />
                 <div className="content">
                     <CardAtendimentos />
