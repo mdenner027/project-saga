@@ -1,7 +1,9 @@
 import React from 'react';
-import Footer from '../../Components/Footer/Footer';
-import NavHeader from '../../Components/NavHeader/NavHeader';
-import MainMenu from '../../Components/SidebarMenu';
+import Footer from '../../../components/footer/Footer';
+import NavHeader from '../../../components/navHeader/NavHeader';
+import RegistraCard from '../../../components/registraCard/RegistraCard';
+import MainMenu from '../../../components/sidebarMenu';
+import ListaDiscenetesCard from './listaDiscentesCard';
 
 export default function DiscentesMain() {
     return (
@@ -10,6 +12,8 @@ export default function DiscentesMain() {
                 <MainMenu nameActive="discentes" />
                 <NavHeader title="Registro de Discentes" />
                 <div className="content">
+                    <RegistraCard title="Discente" />
+                    <ListaDiscenetesCard />
                 </div>
                 <Footer />
             </div>

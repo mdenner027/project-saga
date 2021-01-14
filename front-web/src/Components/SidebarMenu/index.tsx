@@ -23,7 +23,7 @@ function MainMenu({ nameActive }: Props) {
                         nameActive = {nameActive}
                         nameItem="Registro de Atendimentos"
                         iconItem="education_paper"
-                        linkItem="/" />
+                        linkItem="/registro-de-atendimentos" />
                     <MenuItem
                         idItem="discentes"
                         nameActive = {nameActive}
@@ -41,19 +41,19 @@ function MainMenu({ nameActive }: Props) {
                         nameActive = {nameActive}
                         nameItem="Registro de Demandas"
                         iconItem="ui-1_settings-gear-63"
-                        linkItem="/" />
+                        linkItem="/registro-de-demandas" />
                     <MenuItem
                         idItem="tipos"
                         nameActive = {nameActive}
                         nameItem="Tipos de Atendimentos"
                         iconItem="ui-1_settings-gear-63"
-                        linkItem="/" />
+                        linkItem="/registro-de-tipos" />
                     <MenuItem
                         idItem="encaminhamentos"
                         nameActive = {nameActive}
                         nameItem="Encaminhamentos"
                         iconItem="ui-1_settings-gear-63"
-                        linkItem="/" />
+                        linkItem="/registro-de-encaminhamentos" />
                     <MenuItem
                         idItem="sair"
                         nameActive = {nameActive}

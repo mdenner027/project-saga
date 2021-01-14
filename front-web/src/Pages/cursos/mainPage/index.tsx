@@ -1,7 +1,9 @@
 import React from 'react';
-import Footer from '../../Components/Footer/Footer';
-import NavHeader from '../../Components/NavHeader/NavHeader';
-import MainMenu from '../../Components/SidebarMenu';
+import Footer from '../../../components/footer/Footer';
+import NavHeader from '../../../components/navHeader/NavHeader';
+import RegistraCard from '../../../components/registraCard/RegistraCard';
+import MainMenu from '../../../components/sidebarMenu';
+import ListCard from './listCard';
 
 export default function CursosMain() {
     return (
@@ -10,6 +12,8 @@ export default function CursosMain() {
                 <MainMenu nameActive="cursos" />
                 <NavHeader title="Registro de Cursos" />
                 <div className="content">
+                    <RegistraCard title="Curso" />
+                    <ListCard />
                 </div>
                 <Footer />
             </div>

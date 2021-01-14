@@ -1,6 +1,6 @@
-import Footer from "../../Components/Footer/Footer";
-import NavHeader from "../../Components/NavHeader/NavHeader";
-import MainMenu from "../../Components/SidebarMenu";
+import Footer from "../../components/footer/Footer";
+import NavHeader from "../../components/navHeader/NavHeader";
+import MainMenu from "../../components/sidebarMenu";
 import CardAtendidos from "./CardAtendidos";
 import CardAtendimentos from "./CardAtendimentos";
 
