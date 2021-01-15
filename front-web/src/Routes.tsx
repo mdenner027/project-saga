@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import AtendimentosMain from './pages/atendimentos/mainPage';
 import CursosMain from './pages/cursos/mainPage';
 import DemandasMain from './pages/demandas/mainPage';
+import CadastraDiscente from './pages/discentes/adiconaDiscente';
 import DiscentesMain from './pages/discentes/mainPage';
 import EncaminhamentosMain from './pages/encaminhamentos/mainPage';
 import Home from './pages/home';
@@ -12,27 +13,16 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact>
-                    <Home />
-                </Route>
-                <Route path="/registro-de-discentes">
-                    <DiscentesMain />
-                </Route>
-                <Route path="/registro-de-atendimentos">
-                    <AtendimentosMain />
-                </Route>
-                <Route path="/registro-de-cursos">
-                    <CursosMain />
-                </Route>
-                <Route path="/registro-de-demandas">
-                    <DemandasMain />
-                </Route>
-                <Route path="/registro-de-tipos">
-                    <TiposMain />
-                </Route>
-                <Route path="/registro-de-encaminhamentos">
-                    <EncaminhamentosMain />
-                </Route>
+                <Route path="/" exact component={Home} />
+
+                <Route path="/cadastrar-discente" component={CadastraDiscente} />
+                <Route path="/registro-de-discentes" component={DiscentesMain} />
+
+                <Route path="/registro-de-atendimentos" component={AtendimentosMain} />
+                <Route path="/registro-de-cursos" component={CursosMain} />
+                <Route path="/registro-de-demandas" component={DemandasMain} />
+                <Route path="/registro-de-tipos" component={TiposMain} />
+                <Route path="/registro-de-encaminhamentos" component={EncaminhamentosMain} />
             </Switch>
         </BrowserRouter>
     );

@@ -1,15 +1,6 @@
 import React from 'react';
 import TabelaCurso from './tabelaCurso';
 
-/*
-    Esse é o card utilizado em todas as páginas, sendo a única 
-    variação o texto do botão.
-*/
-
-type Props = {
-    cardType: string;
-    buttonType: string;
-}
 export default function ListCard() {
     return (
         <div className="row">
