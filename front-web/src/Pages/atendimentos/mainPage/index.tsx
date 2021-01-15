@@ -11,7 +11,7 @@ export default function AtendimentosMain() {
                 <MainMenu nameActive="atendimentos" />
                 <NavHeader title="Registro de Atendimentos" />
                 <div className="content">
-                    <RegistraCard title="Atendimento" />
+                    <RegistraCard link="" title="Atendimento" />
                     
                 </div>
                 <Footer />

@@ -12,7 +12,7 @@ export default function CursosMain() {
                 <MainMenu nameActive="cursos" />
                 <NavHeader title="Registro de Cursos" />
                 <div className="content">
-                    <RegistraCard title="Curso" />
+                    <RegistraCard link="/cadastrar-curso" title="Curso" />
                     <ListCard />
                 </div>
                 <Footer />

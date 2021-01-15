@@ -13,9 +13,7 @@ export default function DiscentesMain() {
                 <MainMenu nameActive="discentes" />
                 <NavHeader title="Registro de Discentes" />
                 <div className="content">
-                    <Link to="/cadastrar-discente">
-                        <RegistraCard title="Discente" />
-                    </Link>
+                    <RegistraCard link="/cadastrar-discente" title="Discente" />
                     <ListaDiscenetesCard />
                 </div>
                 <Footer />

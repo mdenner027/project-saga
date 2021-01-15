@@ -11,7 +11,7 @@ export default function EncaminhamentosMain() {
                 <MainMenu nameActive="encaminhamentos" />
                 <NavHeader title="Registro de Encaminhamentos" />
                 <div className="content">
-                    <RegistraCard title="Encaminhamento" />
+                    <RegistraCard link="" title="Encaminhamento" />
                     
                 </div>
                 <Footer />

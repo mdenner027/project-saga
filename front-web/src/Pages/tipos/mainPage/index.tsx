@@ -11,7 +11,7 @@ export default function TiposMain() {
                 <MainMenu nameActive="tipos" />
                 <NavHeader title="Registro de Tipos de Atendimento" />
                 <div className="content">
-                    <RegistraCard title="Tipo de Atendimento" />
+                    <RegistraCard link="" title="Tipo de Atendimento" />
                     
                 </div>
                 <Footer />

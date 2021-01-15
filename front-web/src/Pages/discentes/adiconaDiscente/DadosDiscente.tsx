@@ -45,7 +45,7 @@ export default function DadosDiscente() {
                         </div>
                     </div>
                     <div className="row">
-                        <VoltarBotao />
+                        <VoltarBotao link="/registro-de-discentes"/>
                         <ConfirmarBotao textoBotao="Cadastrar Discente" />
                     </div>
                 </form>

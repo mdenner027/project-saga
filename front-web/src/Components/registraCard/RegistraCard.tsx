@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import RegistraBotao from '../buttons/RegistraBotao';
 
 /*
@@ -8,8 +9,9 @@ import RegistraBotao from '../buttons/RegistraBotao';
 
 type Props = {
     title: string;
+    link: string;
 }
-export default function RegistraCard({ title }: Props) {
+export default function RegistraCard({ title, link }: Props) {
     return (
         <div className="row">
             <div className="col-md-12">
@@ -19,7 +21,9 @@ export default function RegistraCard({ title }: Props) {
                     </div>
                     <div className="card-body">
                         <div className="col-md-12">
-                            <RegistraBotao title={title} />
+                            <Link style={{ textDecoration: 'none' }} to={link}>
+                                <RegistraBotao title={title} />
+                            </Link>
                         </div>
                     </div>
                 </div>

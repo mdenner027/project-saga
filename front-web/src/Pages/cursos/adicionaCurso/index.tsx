@@ -1,18 +1,17 @@
 import React from 'react';
 import Footer from '../../../components/footer/Footer';
 import NavHeader from '../../../components/navHeader/NavHeader';
-import RegistraCard from '../../../components/registraCard/RegistraCard';
 import MainMenu from '../../../components/sidebarMenu';
+import DadosCurso from './DadosCurso';
 
-export default function DemandasMain() {
+export default function CadastraCurso() {
     return (
         <div className="wrapper">
             <div className="main-panel ps ps--active-y" id="main-panel">
-                <MainMenu nameActive="demandas" />
-                <NavHeader title="Registro de Demandas" />
+                <MainMenu nameActive="cursos" />
+                <NavHeader title="Registro de Discentes" />
                 <div className="content">
-                    <RegistraCard link="" title="Demanda" />
-                    
+                    <DadosCurso />
                 </div>
                 <Footer />
             </div>
