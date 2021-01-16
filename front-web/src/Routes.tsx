@@ -9,6 +9,7 @@ import CadastraDiscente from './pages/discentes/adiconaDiscente';
 import DiscentesMain from './pages/discentes/mainPage';
 import EncaminhamentosMain from './pages/encaminhamentos/mainPage';
 import Home from './pages/home';
+import CadastraTipo from './pages/tipos/adicionaTipo';
 import TiposMain from './pages/tipos/mainPage';
 
 export default function Routes() {
@@ -28,7 +29,9 @@ export default function Routes() {
                 <Route path="/cadastrar-demanda" component={CadastraDemanda} />
                 <Route path="/registro-de-demandas" component={DemandasMain} />
 
+                <Route path="/cadastrar-tipo-de-atendimento" component={CadastraTipo} />
                 <Route path="/registro-de-tipos" component={TiposMain} />
+
                 <Route path="/registro-de-encaminhamentos" component={EncaminhamentosMain} />
             </Switch>
         </BrowserRouter>

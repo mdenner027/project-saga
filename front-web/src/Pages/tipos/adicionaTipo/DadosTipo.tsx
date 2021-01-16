@@ -1,21 +1,20 @@
 import VoltarBotao from '../../../components/buttons/VoltarBotao';
+import React from 'react';
 import ConfirmarBotao from '../../../components/buttons/ConfirmarBotao';
-import CodigoCursoInput from './CodigoCursoInput';
-import NomeCursoInput from './NomeCursoInput';
+import NomeTipoInput from './NomeTipoInput';
 
-export default function DadosCurso() {
+export default function DadosTipo() {
     return (
         <div className="card">
             <div className="card-header">
-                <h5 className="title">Cadastrar Curso</h5>
+                <h5 className="title">Cadastrar Tipo de Atendimento</h5>
             </div>
             <div className="card-body">
                 <form>
                     <fieldset>
-                        <legend>Informações do Curso</legend>
+                        <legend>Informações do Tipo de Atendimento</legend>
                         <div className="row">
-                            <CodigoCursoInput />
-                            <NomeCursoInput />
+                            <NomeTipoInput />
                         </div>
                     </fieldset>
                     <div className="row">
@@ -24,8 +23,8 @@ export default function DadosCurso() {
                         </div>
                     </div>
                     <div className="row">
-                        <VoltarBotao link="/registro-de-cursos"/>
-                        <ConfirmarBotao textoBotao="Cadastrar Curso" />
+                        <VoltarBotao link="/registro-de-tipos" />
+                        <ConfirmarBotao textoBotao="Cadastrar Tipo" />
                     </div>
                 </form>
             </div>
