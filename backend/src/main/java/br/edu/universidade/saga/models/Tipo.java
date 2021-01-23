@@ -1,4 +1,4 @@
-package br.edu.ufersa.saga.models;
+package br.edu.universidade.saga.models;
 
 import java.io.Serializable;
 
@@ -14,22 +14,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "demandas")
+@Table(name = "tipos")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Demanda implements Serializable {
+public class Tipo implements Serializable {
 	/**
 	 * 
 	 */
+	
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_demanda", nullable = false, unique = true)
-	private Long idDemanda;
+	@Column(name = "id_tipo", unique = true, nullable = false)
+	private Long idTipo;
 
-	@Column(name = "nome_demanda", nullable = false, unique = true)
-	private String nomeDemanda;
-
+	@Column(name = "nome_tipo", unique = true, nullable = false)
+	private String nomeTipo;
 }

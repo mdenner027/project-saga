@@ -1,4 +1,4 @@
-package br.edu.ufersa.saga.models;
+package br.edu.universidade.saga.models;
 
 import java.io.Serializable;
 
@@ -14,11 +14,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "cursos")
+@Table(name = "demandas")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Curso implements Serializable {
+public class Demanda implements Serializable {
 	/**
 	 * 
 	 */
@@ -26,13 +26,10 @@ public class Curso implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_curso", nullable = false, unique = true)
-	private Long idCurso;
+	@Column(name = "id_demanda", nullable = false, unique = true)
+	private Long idDemanda;
 
-	@Column(name = "cod_mec_curso", nullable = false, unique = true)
-	private Long codMecCurso;
+	@Column(name = "nome_demanda", nullable = false, unique = true)
+	private String nomeDemanda;
 
-	@Column(name = "nome_curso", nullable = false, unique = true)
-	private String nomeCurso;
-	
 }

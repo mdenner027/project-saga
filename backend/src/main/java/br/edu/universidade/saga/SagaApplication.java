@@ -1,4 +1,4 @@
-package br.edu.ufersa.saga;
+package br.edu.universidade.saga;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

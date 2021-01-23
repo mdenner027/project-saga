@@ -1,4 +1,4 @@
-package br.edu.ufersa.saga.configs;
+package br.edu.universidade.saga.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

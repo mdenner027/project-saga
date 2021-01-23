@@ -1,4 +1,4 @@
-package br.edu.ufersa.saga.models;
+package br.edu.universidade.saga.models;
 
 import java.io.Serializable;
 
