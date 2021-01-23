@@ -1,20 +1,11 @@
 import React from 'react';
-import Footer from '../../../components/footer/Footer';
-import NavHeader from '../../../components/navHeader/NavHeader';
-import MainMenu from '../../../components/sidebarMenu';
 import DadosTipo from './DadosTipo';
+import MainContainer from '../../../components/mainContainer';
 
 export default function CadastraTipo() {
     return (
-        <div className="wrapper">
-            <div className="main-panel ps ps--active-y" id="main-panel">
-                <MainMenu nameActive="tipos" />
-                <NavHeader title="Registro de Tipos de Atendimento" />
-                <div className="content">
-                    <DadosTipo />
-                </div>
-                <Footer />
-            </div>
-        </div>
+        <MainContainer activeMenu="tipos" headerTitle="Registro de Tipos de Atendimento">
+            <DadosTipo />
+        </MainContainer>
     );
 }

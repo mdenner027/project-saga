@@ -1,23 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Footer from '../../../components/footer/Footer';
-import NavHeader from '../../../components/navHeader/NavHeader';
-import RegistraCard from '../../../components/registraCard/RegistraCard';
-import MainMenu from '../../../components/sidebarMenu';
 import ListaDiscenetesCard from './listaDiscentesCard';
+import MainContainer from '../../../components/mainContainer';
+import RegistraCard from '../../../components/registraCard/RegistraCard';
 
 export default function DiscentesMain() {
     return (
-        <div className="wrapper">
-            <div className="main-panel ps ps--active-y" id="main-panel">
-                <MainMenu nameActive="discentes" />
-                <NavHeader title="Registro de Discentes" />
-                <div className="content">
-                    <RegistraCard link="/cadastrar-discente" title="Discente" />
-                    <ListaDiscenetesCard />
-                </div>
-                <Footer />
-            </div>
-        </div>
+        <MainContainer activeMenu="discentes" headerTitle="Registro de Discentes">
+            <RegistraCard link="/cadastrar-discente" title="Discente" />
+            <ListaDiscenetesCard />
+        </MainContainer>
     );
 }

@@ -4,7 +4,7 @@ type Props = {
     title: string;
 }
 
-export default function NavHeader({ title }: Props) {
+export default function MainHeader({ title }: Props) {
     return (
         <nav className="navbar navbar-expand-lg panel-header panel-header-sm navbar-transparent bg-navheader navbar-absolute">
             <div className="new-config new-config container-fluid">

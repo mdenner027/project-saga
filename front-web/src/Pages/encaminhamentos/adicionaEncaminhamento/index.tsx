@@ -1,14 +1,11 @@
 import React from 'react';
-import Footer from '../../../components/footer/Footer';
-import NavHeader from '../../../components/navHeader/NavHeader';
-import MainMenu from '../../../components/sidebarMenu';
 import DadosEncaminhamento from './DadosEncaminhamento';
-import Frame from './Frame';
+import MainContainer from '../../../components/mainContainer';
 
 export default function CadastraEncaminhamento() {
     return (
-        <Frame>
+        <MainContainer activeMenu="encaminhamentos" headerTitle="">
             <DadosEncaminhamento />
-        </Frame>
+        </MainContainer>
     );
 }

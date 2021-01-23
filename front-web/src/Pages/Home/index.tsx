@@ -1,21 +1,14 @@
-import Footer from "../../components/footer/Footer";
-import NavHeader from "../../components/navHeader/NavHeader";
-import MainMenu from "../../components/sidebarMenu";
+import React from 'react';
 import CardAtendidos from "./CardAtendidos";
 import CardAtendimentos from "./CardAtendimentos";
+import MainContainer from "../../components/mainContainer";
 
 export default function Home() {
+
     return (
-        <div className="wrapper">
-            <div className="main-panel ps ps--active-y" id="main-panel">
-                <MainMenu nameActive="inicio"/>
-                <NavHeader title="Início" />
-                <div className="content">
-                    <CardAtendimentos />
-                    <CardAtendidos />
-                </div>
-                <Footer />
-            </div>
-        </div>
+        <MainContainer activeMenu="inicio" headerTitle="Início">
+            <CardAtendimentos />
+            <CardAtendidos />
+        </MainContainer>
     );
 }
