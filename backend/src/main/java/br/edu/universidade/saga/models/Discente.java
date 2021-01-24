@@ -60,6 +60,6 @@ public class Discente implements Serializable {
 	@JsonBackReference
 	@ManyToOne(targetEntity = Curso.class)
 	@JoinColumn(name = "id_curso_cliente")
-	private Curso cursoCliente;
+	private Curso cursoDiscente;
 
 }
