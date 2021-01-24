@@ -1,6 +1,7 @@
 package br.edu.universidade.saga.models;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,9 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import br.edu.universidade.saga.enums.RegistroStatus;
 import lombok.Getter;
@@ -60,10 +63,14 @@ public class Discente implements Serializable {
 
 	@JsonBackReference
 	@ManyToOne(targetEntity = Curso.class)
-	@JoinColumn(name = "id_curso_cliente")
+	@JoinColumn(name = "id_curso_discente")
 	private Curso cursoDiscente;
 	
 	@Column(name = "status_discente", nullable = false)
 	private RegistroStatus statusDiscente;
+	
+	@JsonManagedReference
+	@OneToMany(mappedBy = "discenteAtendimento", targetEntity = Atendimento.class)
+	private Set<Atendimento> atendimentosDiscente;
 
 }
