@@ -13,6 +13,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import br.edu.universidade.saga.enums.RegistroStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -61,5 +62,8 @@ public class Discente implements Serializable {
 	@ManyToOne(targetEntity = Curso.class)
 	@JoinColumn(name = "id_curso_cliente")
 	private Curso cursoDiscente;
+	
+	@Column(name = "status_discente", nullable = false)
+	private RegistroStatus statusDiscente;
 
 }

@@ -13,6 +13,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import br.edu.universidade.saga.enums.RegistroStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -36,6 +37,9 @@ public class Demanda implements Serializable {
 	@Column(name = "nome_demanda", nullable = false, unique = true)
 	private String nomeDemanda;
 
+	@Column(name = "status_demanda", nullable = false)
+	private RegistroStatus statusDemanda;
+	
 	@JsonManagedReference
 	@OneToMany(mappedBy = "demandaAtendimento", targetEntity = Atendimento.class)
 	private Set<Atendimento> atendimentosDemanda;

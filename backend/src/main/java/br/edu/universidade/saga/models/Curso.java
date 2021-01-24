@@ -13,6 +13,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import br.edu.universidade.saga.enums.RegistroStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -39,6 +40,9 @@ public class Curso implements Serializable {
 	@Column(name = "nome_curso", nullable = false, unique = true)
 	private String nomeCurso;
 
+	@Column(name = "status_curso", nullable = false)
+	private RegistroStatus statusCurso;
+	
 	@JsonManagedReference
 	@OneToMany(mappedBy = "cursoDiscente", targetEntity = Discente.class)
 	private Set<Discente> discentesCurso;

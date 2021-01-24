@@ -17,6 +17,7 @@ import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import br.edu.universidade.saga.enums.RegistroStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -51,10 +52,13 @@ public class Atendimento implements Serializable {
 	@ManyToOne(targetEntity = Encaminhamento.class)
 	@JoinColumn(name = "id_encaminhamento_atendimento", nullable = false)
 	private Encaminhamento encaminhamentoAtendimento;
-	
+
 	@JsonBackReference
 	@ManyToOne(targetEntity = Tipo.class)
 	@JoinColumn(name = "id_tipo_atendimento", nullable = false)
 	private Tipo tipoAtendimento;
 	
+	@Column(name = "status_atendimento", nullable = false)
+	private RegistroStatus statusAtendimento;
+
 }

@@ -13,6 +13,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import br.edu.universidade.saga.enums.RegistroStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -36,6 +37,9 @@ public class Encaminhamento implements Serializable {
 	@Column(name = "nome_encaminhamento", nullable = false, unique = true)
 	private String nomeEncaminhamento;
 
+	@Column(name = "status_encaminhamento", nullable = false)
+	private RegistroStatus statusEncaminhamento;
+	
 	@JsonManagedReference
 	@OneToMany(mappedBy = "encaminhamentoAtendimento", targetEntity = Atendimento.class)
 	private Set<Atendimento> atendimentosEncaminhamento;
