@@ -1,7 +1,7 @@
 package br.edu.universidade.saga.models;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -40,7 +40,7 @@ public class Atendimento implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "data_hora_atendimento", nullable = false)
-	private LocalDateTime dataHoraAtendimento;
+	private Calendar dataHoraAtendimento;
 
 	@JsonBackReference
 	@ManyToOne(targetEntity = Demanda.class)
@@ -51,4 +51,10 @@ public class Atendimento implements Serializable {
 	@ManyToOne(targetEntity = Encaminhamento.class)
 	@JoinColumn(name = "id_encaminhamento_atendimento", nullable = false)
 	private Encaminhamento encaminhamentoAtendimento;
+	
+	@JsonBackReference
+	@ManyToOne(targetEntity = Tipo.class)
+	@JoinColumn(name = "id_tipo_atendimento", nullable = false)
+	private Tipo tipoAtendimento;
+	
 }
