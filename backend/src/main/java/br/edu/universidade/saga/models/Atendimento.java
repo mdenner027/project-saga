@@ -46,4 +46,9 @@ public class Atendimento implements Serializable {
 	@ManyToOne(targetEntity = Demanda.class)
 	@JoinColumn(name = "id_demanda_atendimento", nullable = false)
 	private Demanda demandaAtendimento;
+
+	@JsonBackReference
+	@ManyToOne(targetEntity = Encaminhamento.class)
+	@JoinColumn(name = "id_encaminhamento_atendimento", nullable = false)
+	private Encaminhamento encaminhamentoAtendimento;
 }
