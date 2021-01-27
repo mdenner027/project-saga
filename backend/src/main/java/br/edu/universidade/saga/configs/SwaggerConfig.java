@@ -27,7 +27,7 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo getApiInfo() {
-		Contact contact = new Contact("Max Denner", "none", "maxdenner027@hotmail.com");
+		Contact contact = new Contact("Max Denner", "https://www.linkedin.com/in/max-denner-t-da-silva-a72bb5165/", "maxdenner027@hotmail.com");
 		return new ApiInfoBuilder()
 				.title("Project-SAGA")
 				.description("Sistema Auxiliar Para Gerenciamento de Atendimentos")
