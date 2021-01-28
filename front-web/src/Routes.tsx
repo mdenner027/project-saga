@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import AtendimentosMain from './pages/atendimentos/mainPage';
-import CadastraCurso from './pages/cursos/adicionaCurso';
-import CadastraDemanda from './pages/demandas/adicionaDemanda';
-import CadastraDiscente from './pages/discentes/adiconaDiscente';
-import CadastraEncaminhamento from './pages/encaminhamentos/adicionaEncaminhamento';
-import CadastraTipo from './pages/tipos/adicionaTipo';
-import CursosMain from './pages/cursos/mainPage';
-import DemandasMain from './pages/demandas/mainPage';
-import DiscentesMain from './pages/discentes/mainPage';
-import EncaminhamentosMain from './pages/encaminhamentos/mainPage';
-import Home from './pages/home';
-import TiposMain from './pages/tipos/mainPage';
+import AtendimentosMain from './containers/atendimentos/mainPage';
+import CadastraCurso from './containers/cursos/adicionaCurso';
+import CadastraDemanda from './containers/demandas/adicionaDemanda';
+import CadastraDiscente from './containers/discentes/adiconaDiscente';
+import CadastraEncaminhamento from './containers/encaminhamentos/adicionaEncaminhamento';
+import CadastraTipo from './containers/tipos/adicionaTipo';
+import CursosMain from './containers/cursos/mainPage';
+import DemandasMain from './containers/demandas/mainPage';
+import DiscentesMain from './containers/discentes/mainPage';
+import EncaminhamentosMain from './containers/encaminhamentos/mainPage';
+import Home from './containers/home';
+import TiposMain from './containers/tipos/mainPage';
 
 export default function Routes() {
     return (

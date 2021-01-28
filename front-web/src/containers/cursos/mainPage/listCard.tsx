@@ -1,7 +1,12 @@
 import React from 'react';
+import { CursoListItem } from '../../../types/cursoTypes';
+import Rows from './rows';
 import TabelaCurso from './tabelaCurso';
 
-export default function ListCard() {
+type Props = {
+    cursos: CursoListItem[];
+}
+export default function ListCard({ cursos }: Props) {
     return (
         <div className="row">
             <div className="col-md-12">
@@ -11,7 +16,7 @@ export default function ListCard() {
                     </div>
                     <div className="card-body">
                         <div className="col-md-12">
-                            <TabelaCurso />
+                            <TabelaCurso cursos={cursos}/>
                         </div>
                     </div>
                 </div>

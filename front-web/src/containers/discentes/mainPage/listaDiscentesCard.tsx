@@ -11,7 +11,9 @@ export default function ListaDiscenetesCard() {
                     </div>
                     <div className="card-body">
                         <div className="col-md-12">
-                            <TabelaDiscentes />
+                            <TabelaDiscentes >
+                                
+                            </TabelaDiscentes>
                         </div>
                     </div>
                 </div>

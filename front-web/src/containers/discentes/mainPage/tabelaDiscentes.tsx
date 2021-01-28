@@ -1,6 +1,10 @@
 import React from 'react';
 
-export default function TabelaDiscentes() {
+type Props = {
+    children: React.ReactNode;
+}
+
+export default function TabelaDiscentes({ children }: Props) {
     return (
         <div className="table table-hover table-responsive">
             <table className="table">
@@ -27,7 +31,7 @@ export default function TabelaDiscentes() {
                     </tr>
                 </thead>
                 <tbody>
-
+                    {children}
                 </tbody>
             </table>
         </div>
