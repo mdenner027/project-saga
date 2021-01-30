@@ -1,12 +1,12 @@
+import React, { useState } from 'react';
 import VoltarBotao from '../../../components/buttons/VoltarBotao';
 import ConfirmarBotao from '../../../components/buttons/ConfirmarBotao';
 import CodigoCursoInput from './CodigoCursoInput';
 import NomeCursoInput from './NomeCursoInput';
-import React, { useState } from 'react';
 import { CursoInsert } from '../../../types/cursoTypes';
 import { postCurso } from '../../../api/cursoApi';
-import { Redirect, useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useHistory } from 'react-router-dom';
 
 export default function DadosCurso() {
     const [nome, setNome] = useState("");

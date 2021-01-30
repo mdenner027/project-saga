@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.edu.universidade.saga.dtos.curso.CursoInsertDto;
-import br.edu.universidade.saga.dtos.curso.CursoListDto;
+import br.edu.universidade.saga.dtos.curso.CursoItemDto;
 import br.edu.universidade.saga.dtos.curso.CursoUpdateDto;
 import br.edu.universidade.saga.services.CursoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 
-@Api(value = "Endpoint Cursos")
+@Api(tags = "Endpoint Curso", hidden = true)
 @RestController
 @RequestMapping(value = "/cursos")
 @AllArgsConstructor
@@ -32,11 +32,20 @@ public class CursoController {
 	@ApiOperation(
 			value = "Endpoint para listar todos os cursos por ordem alfabética.",
 			httpMethod = "GET",
-			response = CursoListDto.class,
+			response = CursoItemDto.class,
 			responseContainer = "List")
 	@GetMapping
-	public ResponseEntity<List<CursoListDto>> findAll() {
+	public ResponseEntity<List<CursoItemDto>> findAll() {
 		return ResponseEntity.status(HttpStatus.OK).body(cursoService.findAll());
+	}
+	
+	@ApiOperation(
+			value = "Endpoint para buscar um registro específico.",
+			httpMethod = "GET",
+			response = CursoItemDto.class)
+	@GetMapping("/{idCurso}")
+	public ResponseEntity<CursoItemDto> findById(@PathVariable Long idCurso){
+		return ResponseEntity.status(HttpStatus.OK).body(cursoService.findById(idCurso));
 	}
 	
 	@ApiOperation(

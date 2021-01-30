@@ -12,6 +12,7 @@ import DiscentesMain from './containers/discentes/mainPage';
 import EncaminhamentosMain from './containers/encaminhamentos/mainPage';
 import Home from './containers/home';
 import TiposMain from './containers/tipos/mainPage';
+import ExibeCurso from './containers/cursos/exibeCurso';
 
 export default function Routes() {
     return (
@@ -26,6 +27,7 @@ export default function Routes() {
 
                 <Route path="/cadastrar-curso" component={CadastraCurso} />
                 <Route path="/registro-de-cursos" component={CursosMain} />
+                <Route path="/alterar-curso" component={ExibeCurso}/>
 
                 <Route path="/cadastrar-demanda" component={CadastraDemanda} />
                 <Route path="/registro-de-demandas" component={DemandasMain} />

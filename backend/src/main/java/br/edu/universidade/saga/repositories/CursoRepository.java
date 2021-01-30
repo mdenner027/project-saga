@@ -10,4 +10,5 @@ import br.edu.universidade.saga.models.Curso;
 public interface CursoRepository extends JpaRepository<Curso, Long> {
 	List<Curso> findByStatusCursoOrderByNomeCurso(RegistroStatus status);
 
+	Curso findByIdCurso(Long id);
 }

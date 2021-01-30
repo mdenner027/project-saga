@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { CursoListItem } from '../../../types/cursoTypes';
 
 type Props = {
-    getCodigo: (value: number) => void;
+    handleChange: (value: number) => void;
+    curso: CursoListItem;
 }
 
-export default function CodigoCursoInput({ getCodigo }: Props) {
-    const [codigo, setCodigo] = useState<number>();
-    
-    const handleChange = (value: number) => {
-        setCodigo(Number.isNaN(value) ? 0 : value);
-        getCodigo(Number.isNaN(value) ? 0 : value);
-    }
+export default function CodCursoAltera({ handleChange, curso }: Props) {
     return (
         <div className="col-md-3 pr-1">
             <div className="form-group">
                 <label htmlFor="codigoCurso">Codigo e-Mec</label>
                 <input type="text"
                     required={true} id="codigoCurso"
-                    value={codigo}
+                    value={curso.codMecCurso || 0}
                     onChange={event => handleChange(Number.parseInt(event.target.value))}
                     name="codigoCurso"
                     className="form-control"

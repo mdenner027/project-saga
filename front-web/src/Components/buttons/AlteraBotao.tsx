@@ -2,9 +2,10 @@ import React from 'react';
 
 type Props = {
     textoBotao: string;
+    onSubmit?: (event:React.FormEvent<HTMLButtonElement>) => void;
 }
 
-export default function ConfirmarBotao({ textoBotao }: Props) {
+export default function AlteraBotao({ textoBotao, onSubmit }: Props) {
     return (
         <div className="col-md-6">
             <div className="form-group">

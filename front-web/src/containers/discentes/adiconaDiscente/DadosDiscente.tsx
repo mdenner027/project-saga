@@ -18,7 +18,7 @@ export default function DadosDiscente() {
     return (
         <div className="card">
             <div className="card-header">
-                <h5 className="title">Cadastrar Discente</h5>
+                <h5 className="title">Cadastrar Discente {numeroCasa}</h5>
             </div>
             <div className="card-body">
                 <form>

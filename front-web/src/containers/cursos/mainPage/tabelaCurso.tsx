@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import { getCursos } from '../../../api/cursoApi';
 import { CursoListItem } from '../../../types/cursoTypes';
 import Rows from './rows';
 
-type Props = {
-    cursos: CursoListItem[];
-}
+export default function TabelaCurso() {
+    const [cursos, setCursos] = useState<CursoListItem[]>([]);
+    useEffect(() => {
+        getCursos()
+            .then(response => setCursos(response.data))
+            .catch(() => toast.error("Ops! Parece que não foi possível carregar os cursos cadastrados."));
+    }, [cursos]);
 
-export default function TabelaCurso({ cursos }: Props) {
     return (
         <div className="table table-hover table-responsive">
             <table className="table">
@@ -28,10 +33,7 @@ export default function TabelaCurso({ cursos }: Props) {
                 </thead>
                 <tbody>
                     {cursos.map(curso => (
-                        <Rows
-                            codigo={curso.codMecCurso}
-                            nome={curso.nomeCurso}
-                            key={curso.idCurso} />
+                        <Rows curso={curso} key={curso.idCurso} />
                     ))}
                 </tbody>
             </table>

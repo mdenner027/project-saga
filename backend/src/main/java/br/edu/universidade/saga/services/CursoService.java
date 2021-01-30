@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.edu.universidade.saga.dtos.curso.CursoInsertDto;
-import br.edu.universidade.saga.dtos.curso.CursoListDto;
+import br.edu.universidade.saga.dtos.curso.CursoItemDto;
 import br.edu.universidade.saga.dtos.curso.CursoUpdateDto;
 import br.edu.universidade.saga.enums.RegistroStatus;
 import br.edu.universidade.saga.models.Curso;
@@ -23,13 +23,21 @@ public class CursoService implements CursoInterface {
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<CursoListDto> findAll() {
+	public List<CursoItemDto> findAll() {
 		ModelMapper mapper = new ModelMapper();
-		List<CursoListDto> cursos = new ArrayList<>();
+		List<CursoItemDto> cursos = new ArrayList<>();
 		cursoRepo.findByStatusCursoOrderByNomeCurso(RegistroStatus.ATIVO).forEach(c -> {
-			cursos.add(mapper.map(c, CursoListDto.class));
+			cursos.add(mapper.map(c, CursoItemDto.class));
 		});
 		return cursos;
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public CursoItemDto findById(Long id) {
+		ModelMapper mapper = new ModelMapper();
+		CursoItemDto curso = mapper.map(cursoRepo.findByIdCurso(id), CursoItemDto.class);
+		return curso;
 	}
 
 	@Override
@@ -47,8 +55,9 @@ public class CursoService implements CursoInterface {
 	@Transactional
 	public CursoUpdateDto update(CursoUpdateDto cursoDto) {
 		ModelMapper mapper = new ModelMapper();
-		Curso curso = cursoRepo.getOne(cursoDto.getIdCurso());
+		Curso curso = new Curso();
 		curso = mapper.map(cursoDto, Curso.class);
+		curso.setStatusCurso(RegistroStatus.ATIVO);
 		curso = cursoRepo.save(curso);
 		return mapper.map(curso, CursoUpdateDto.class);
 	}

@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CursoListDto {
+public class CursoItemDto {
 	@ApiModelProperty(
 			position = 1,
 			name = "idCurso", 
